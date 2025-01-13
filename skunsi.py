@@ -23,4 +23,5 @@ print(petya.age, petya.name)
 print(anna.age, anna.name)
 vasya.say_hell()
 print(vasya.get_info())
+
 del vasya
