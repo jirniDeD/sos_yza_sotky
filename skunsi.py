@@ -1,3 +1,5 @@
+from math import factorial
+
 from Tools.scripts.generate_sre_constants import sre_constants_header
 
 import math
@@ -174,6 +176,54 @@ import math
 #
 #
 # print(Fraction(50, 100) * (Fraction(2, 2)))
+# import math
+# class MyMath:
+#
+#     @staticmethod
+#     def max_of_four(a, b, c, d):
+#         return max(a, b, c, d)
+#
+#     @staticmethod
+#     def min_of_four(a, b, c, d):
+#         return min(a, b, c, d)
+#
+#     @staticmethod
+#     def avg_of_four(a, b, c, d):
+#         return f"{(a + b + c + d)/4}"
+#
+#     @staticmethod
+#     def factorial(n):
+#         math.factorial(4)
+
+# from abc import ABC, abstractmethod
+#
+#
+# class Figure2D(ABC):
+#     @abstractmethod
+#     def area(self):
+#         pass
+#     @abstractmethod
+#     def perimeter(self):
+#         pass
+#
+#
+#
+# class Square(Figure2D):
+#     def __init__(self, side):
+#         self.side = side
+#
+#     def area_sq(self, side):
+#         return side ** 2
+#
+#     def pirimeter_sq(self, side):
+#         return self.side * 4
+#
+# sponge_bob = Square(5)
+# sponge_bob.area_sq(66)
+
+
+
+
 
 
 
