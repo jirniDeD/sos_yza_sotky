@@ -86,94 +86,94 @@ import math
 
 
 
-class Fraction:
-    def __init__(self, numerator,denumenator):
-        self.a = numerator
-        self.b = denumenator
-        self.reduction()
-
-    def __str__(self):
-        return f"{self.a}/{self.b}"
-
-    def multiplication(self, other):
-        return Fraction(self.a * other.a, self.b * other.b)
-
-    def division(self,other):
-        return Fraction(self.a * other.b, self.b * other.a)
-
-    def __add__(self, other):
-        return Fraction(self.a * other.b + self.b * other.a, self.b * other.b)
-
-    def __sub__(self, other):
-        return Fraction(self.a * other.b - self.b * other.a, self.a * other.b)
-
-    def __mul__(self, other):
-        return Fraction(self.a * other.a, self.b * other.b)
-
-    def __truediv__(self, other):
-        return Fraction(self.a * other.b, self.b * other.a)
-
-    def __iadd__(self, other):
-        self.a = self.a * other.b + self.b*other.a
-        self.b = self.b * other.b
-        return self
-
-    def __isub__(self, other):
-        self.a = self.a * other.b - self.b*other.a
-        self.b = self.b * other.b
-        return self
-
-    def __imul__(self, other):
-        self.a = self.a * other.a
-        self.b = self.b * other.b
-        return self
-
-    def __itruediv__(self, other):
-        self.a, self.b = self.a * other.b, self.b * other.a
-        return self
-    def __gt__(self,other):
-        return self.a * other.b > self.b * other.a
-
-    def __lt__(self, other):
-        return self.a * other.b < self.b * other.a
-
-    def __eq__(self, other):
-        return self.a * other.b == self.b * other.a
-
-    def __ne__(self, other):
-        return self.a * other.b != self.b * other.a
-
-    def __ge__(self, other):
-        return self.a * other.b >= self.b * other.a
-
-    def __le__(self, other):
-        return self.a * other.b <= self.b * other.a
-
-    def reduction(self):
-        common_divider = math.gcd(self.a, self.b)
-        self.a = self.a // common_divider
-        self.b = self.b // common_divider
-
-
-
-
-first = Fraction(2, 5)
-print(first)
-second = Fraction(2, 3)
-print(first.multiplication(second))
-print(first.division(second))
-print(first + second)
-print(first - second)
-print(first * second)
-print(first / second)
-first += second
-print(first)
-first -= second
-print(first)
-print(first > second)
-
-
-print(Fraction(50, 100) * (Fraction(2, 2)))
+# class Fraction:
+#     def __init__(self, numerator,denumenator):
+#         self.a = numerator
+#         self.b = denumenator
+#         self.reduction()
+#
+#     def __str__(self):
+#         return f"{self.a}/{self.b}"
+#
+#     def multiplication(self, other):
+#         return Fraction(self.a * other.a, self.b * other.b)
+#
+#     def division(self,other):
+#         return Fraction(self.a * other.b, self.b * other.a)
+#
+#     def __add__(self, other):
+#         return Fraction(self.a * other.b + self.b * other.a, self.b * other.b)
+#
+#     def __sub__(self, other):
+#         return Fraction(self.a * other.b - self.b * other.a, self.a * other.b)
+#
+#     def __mul__(self, other):
+#         return Fraction(self.a * other.a, self.b * other.b)
+#
+#     def __truediv__(self, other):
+#         return Fraction(self.a * other.b, self.b * other.a)
+#
+#     def __iadd__(self, other):
+#         self.a = self.a * other.b + self.b*other.a
+#         self.b = self.b * other.b
+#         return self
+#
+#     def __isub__(self, other):
+#         self.a = self.a * other.b - self.b*other.a
+#         self.b = self.b * other.b
+#         return self
+#
+#     def __imul__(self, other):
+#         self.a = self.a * other.a
+#         self.b = self.b * other.b
+#         return self
+#
+#     def __itruediv__(self, other):
+#         self.a, self.b = self.a * other.b, self.b * other.a
+#         return self
+#     def __gt__(self,other):
+#         return self.a * other.b > self.b * other.a
+#
+#     def __lt__(self, other):
+#         return self.a * other.b < self.b * other.a
+#
+#     def __eq__(self, other):
+#         return self.a * other.b == self.b * other.a
+#
+#     def __ne__(self, other):
+#         return self.a * other.b != self.b * other.a
+#
+#     def __ge__(self, other):
+#         return self.a * other.b >= self.b * other.a
+#
+#     def __le__(self, other):
+#         return self.a * other.b <= self.b * other.a
+#
+#     def reduction(self):
+#         common_divider = math.gcd(self.a, self.b)
+#         self.a = self.a // common_divider
+#         self.b = self.b // common_divider
+#
+#
+#
+#
+# first = Fraction(2, 5)
+# print(first)
+# second = Fraction(2, 3)
+# print(first.multiplication(second))
+# print(first.division(second))
+# print(first + second)
+# print(first - second)
+# print(first * second)
+# print(first / second)
+# first += second
+# print(first)
+# first -= second
+# print(first)
+# print(first > second)
+#
+#
+# print(Fraction(50, 100) * (Fraction(2, 2)))
 
 
 
